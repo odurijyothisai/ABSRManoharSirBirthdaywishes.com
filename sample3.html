@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ABSR Manohar</title>
+  <style>
+    body {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('full pic.jpg'); /* Background image */
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .name-animation {
+      font-size: 5rem;
+      font-family: 'Arial', sans-serif;
+      color: #ff4081;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* Positioning cake image at the top-left corner with blinking animation */
+    .cake-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      animation: cakeBlinkAnimation 1s infinite;
+    }
+
+    /* Positioning cake image at the bottom-right corner with blinking animation */
+    .cake-bottom-right {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      animation: cakeBlinkAnimation 1s infinite;
+    }
+
+    /* Positioning balloon image at the top-right corner with blinking animation */
+    .balloon-top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      animation: balloonBlinkAnimation 1s infinite;
+    }
+
+    /* Positioning balloon image at the bottom-left corner with blinking animation */
+    .balloon-bottom-left {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      animation: balloonBlinkAnimation 1s infinite;
+    }
+
+    /* Floating balloons animation */
+    .balloon-floating {
+      position: absolute;
+      width: 40px;
+      animation: balloonFloatAnimation 6s infinite linear;
+    }
+
+    @keyframes balloonBlinkAnimation {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes balloonFloatAnimation {
+      0% {
+        transform: translateY(0) rotate(0);
+      }
+      100% {
+        transform: translateY(-800px) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="cake-top-left" src="cake4.jpg" alt="Cake Image">
+  <img class="cake-bottom-right" src="cake clg.jpg" alt="Cake Image">
+  <img class="balloon-top-right" src="Dual pic.jpg" alt="Balloon Image">
+  <img class="balloon-bottom-left" src="only face.jpg" alt="Balloon Image">
+  
+  <!-- Modified balloon container for continuous flow -->
+  <div id="balloons.png"></div>
+
+  <h1 class="name-animation">Happy Birthday Manohar Sir</h1>
+
+  <!-- Add an audio element for background music -->
+  <audio autoplay loop>
+    <source src="female song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Function to create and animate balloons
+    function createBalloon() {
+      const balloon = document.createElement('img');
+      balloon.src = 'balloons.png';
+      balloon.alt = 'Balloon Image';
+      balloon.className = 'balloon-floating';
+      balloon.style.top = Math.random() * 100 + '%';
+      balloon.style.left = Math.random() * 100 + '%';
+      document.getElementById('balloon-container').appendChild(balloon);
+
+      balloon.addEventListener('animationiteration', () => {
+        // Remove balloons when they go out of the viewport
+        document.getElementById('balloon-container').removeChild(balloon);
+      });
+    }
+
+    // Create and animate balloons at intervals
+    setInterval(createBalloon, 2000); // Adjust the interval as needed
+  </script>
+</body>
+</html>

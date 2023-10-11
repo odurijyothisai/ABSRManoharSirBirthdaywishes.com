@@ -1,0 +1,36 @@
+A - Adventurous 
+K - Knowledgeable 
+U - Unstoppable 
+L - Lively 
+A - Artistic 
+
+
+B - Brave 
+H - Harmonious 
+A - Agile 
+S - Serene 
+K - Kind-hearted 
+A - Astonishing 
+R - Resourceful 
+A - Affectionate
+
+S - Truthful
+A - Authentic
+T - Trustworthy
+Y - Yielding
+A - Accurate
+
+
+R - Radiant
+A - Admired
+M - Magnificent
+A - Accomplished
+
+
+M - Majestic
+A - Ambitious
+N - Noble 
+O - Observant 
+H - Hopeful 
+A - Analytical 
+R - Resilient 

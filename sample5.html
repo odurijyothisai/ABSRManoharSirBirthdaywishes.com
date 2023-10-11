@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing meta tags and styles here -->
+</head>
+<body>
+  <!-- Add your logo image -->
+  <img src="logo.png" alt="Website Logo" style="position: absolute; top: 20px; left: 20px; width: 100px; z-index: 1;">
+
+  <!-- Your existing content here -->
+  <img class="cake-top-left" src="cake4.jpg" alt="Cake Image">
+  <img class="cake-bottom-right" src="cake clg.jpg" alt="Cake Image">
+  <img class="balloon-top-right" src="Dual pic.jpg" alt="Balloon Image">
+  <img class="balloon-bottom-left" src="only face.jpg" alt="Balloon Image">
+  
+  <!-- Modified balloon container for continuous flow -->
+  <div id="balloon-container"></div>
+
+  <h1 class="name-animation">Happy Birthday ABSR Manohar Sir</h1>
+
+  <!-- Add an audio element for background music -->
+  <audio autoplay loop>
+    <source src="female song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Function to create and animate balloons
+    function createBalloon() {
+      const balloon = document.createElement('img');
+      balloon.src = 'balloons.png';
+      balloon.alt = 'balloon image';
+      balloon.className = 'balloon-floating';
+      balloon.style.top = Math.random() * 100 + '%';
+      balloon.style.left = Math.random() * 100 + '%';
+      document.getElementById('balloon-container').appendChild(balloon);
+
+      balloon.addEventListener('animationiteration', () => {
+        // Remove balloons when they go out of the viewport
+        document.getElementById('balloon-container').removeChild(balloon);
+      });
+    }
+
+    // Create and animate balloons at intervals
+    setInterval(createBalloon, 2000); // Adjust the interval as needed
+  </script>
+</body>
+</html>

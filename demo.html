@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Manohar Sir</title>
+  <link rel="icon" href="cake logo.jpg" type="image/x-icon">
+  <style>
+    body {
+      font-family: lucida, sans-serif;
+      background-image: url('sketch pic.jpg'); /* Background image */
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      animation: floatBackground 20s linear infinite;
+    }
+
+    @keyframes floatBackground {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    .birthday-wishes {
+      text-align: center;
+      margin: 20px;
+      font-size: 1.5rem;
+    }
+
+    .content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .name-vertical {
+      font-style: italic;
+      font-size: 1.5rem;
+      margin: 5px;
+      opacity: 0;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+    }
+
+    /* Make the first letter of each word bold */
+    .name-vertical::first-letter {
+      font-weight: bold;
+    }
+
+    /* Define animations for different lines of text */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes rotateIn {
+      0% {
+        opacity: 0;
+        transform: rotate(-10deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(0);
+      }
+    }
+
+    /* Apply animations to specific lines of text */
+    .name-vertical:nth-child(1) {
+      animation-name: fadeIn;
+    }
+
+    .name-vertical:nth-child(2) {
+      animation-name: slideIn;
+    }
+
+    .name-vertical:nth-child(3) {
+      animation-name: rotateIn;
+    }
+    .name-vertical:nth-child(4) {
+        animation-name: slideIn;
+      }
+      .name-vertical:nth-child(5) {
+        animation-name: rotateIn;
+      }
+
+    /* Music link */
+    .music-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Style for the "Go to Birthday Page" link */
+    .go-to-birthday-page-link {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      text-decoration: none;
+      color: darkgreen; /* Change the color to match your design */
+    }
+
+    .go-to-birthday-page-link:hover {
+      text-decoration: underline;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <!-- Birthday wishes -->
+  <div class="birthday-wishes">
+    🎂🎉 Happy Birthday, Manohar Sir! 🎈 Your leadership 🏆 and guidance 🤝 have been a source of inspiration 🌟 for all of us. May your day be filled with joy 😊, your year with success 🚀, and your life with happiness and health! 🥳🎁🎂
+  </div>
+
+  <div class="content">
+    <div class="name-vertical">A - Adventurous K - Knowledgeable U - Unstoppable L - Lively A - Artistic</div>
+    <div class="name-vertical">B - Brave H - Harmonious A - Agile S - Serene K - Kind-hearted A - Astonishing R - Resourceful A - Affectionate</div>
+    <div class="name-vertical">S - Truthful A - Authentic T - Trustworthy Y - Yielding A - Accurate</div>
+    <div class="name-vertical">R - Radiant A - Admired M - Magnificent A - Accomplished</div>
+    <div class="name-vertical">M - Majestic A - Ambitious N - Noble O - Observant H - Hopeful A - Analytical R - Resilient</div>
+  </div>
+
+  <!-- "Go to Birthday Page" link -->
+  <a class="go-to-birthday-page-link" href="Hb'day_Manu.html">Go to Birthday Page</a>
+
+  <!-- Music link -->
+  <div class="music-link">
+    <audio controls>
+      <source src="female song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</body>
+</html>
